@@ -1,0 +1,44 @@
+Setting up Jenkins
+
+Objective: Download and set up the Jenkins app
+
+Tools required: JRE and Jenkins
+
+
+Steps to be followed:
+1.	Download the Java Runtime Environment 
+2.	Download and install the Jenkins app
+
+
+Step 1:  Downloading the Java Runtime Environment 
+  
+          $ sudo apt-get update 
+          $ sudo apt install openjdk-11-jdk
+          $ java --version
+          
+Step 2:   Downloading and installing the Jenkins app
+
+          $ wget -q -O - https://jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add 
+          $ sudo sh -c 'echo deb http://pkg.jenkins-ci.org/debian binary/ > /etc/apt/sources.list.d/jenkins.list
+          
+          $ sudo apt-get update
+          $ sudo apt-get install jenkins 
+          $ sudo service jenkins status 
+          
+          Run the following commands to start Jenkins. 
+          $ sudo systemctl start jenkins
+          $ sudo systemctl status jenkins
+          
+Step 3: Open localhost:8080 in the browser
+
+Step 4: Run the command to get the admin password 
+          $ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+          
+          Copy this password and paste it on your Jenkins page in the browser
+          Click on Install the suggested plugins
+          You can either create an admin user or skip and continue as admin. Select Skip and continue as admin
+          Click on the Start using Jenkins button
+          
+          
+          
+          
